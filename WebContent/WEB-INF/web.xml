@@ -1,0 +1,61 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+ <web-app>
+ 	<display-name>Thesis</display-name>
+ 	<!-- 加载spring配置文件 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:conf/application.xml
+		</param-value>
+	</context-param>
+ 	<!-- 解决post方法乱码问题 -->
+ 	<filter>
+ 		<filter-name>springEncodingFilter</filter-name>
+ 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+ 		<init-param>
+ 			<param-name>encoding</param-name>
+ 			<param-value>UTF-8</param-value>
+ 		</init-param>
+ 		<init-param>
+ 			<param-name>forceEncoding</param-name>
+ 			<param-value>true</param-value>
+ 		</init-param>
+ 	</filter>
+ 	<!-- 解决session问题 -->
+	<filter>
+	   <filter-name>SpringOpenSessionInViewFilter</filter-name>
+	   <filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
+	 </filter>	 
+ 	<filter-mapping>
+ 		<filter-name>springEncodingFilter</filter-name>
+ 		<url-pattern>/*</url-pattern>
+ 	</filter-mapping>
+    <filter-mapping>
+	    <filter-name>SpringOpenSessionInViewFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!-- 配置ContextLoaderListener，此监听用来加载我们写的配置文件 -->
+ 	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- 加载SpringMVC的配置文件 -->
+ 	<servlet>
+ 		<servlet-name>springmvc</servlet-name>
+ 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+ 		<init-param>
+ 			<param-name>contextConfigLocation</param-name>
+ 			<param-value>classpath:conf/spring-servlet.xml
+ 			</param-value>
+ 		</init-param>
+ 		<load-on-startup>2</load-on-startup>
+ 	</servlet>
+ 	<servlet-mapping>
+ 		<servlet-name>springmvc</servlet-name>
+ 		<url-pattern>*.do</url-pattern>
+ 	</servlet-mapping>
+ 	<welcome-file-list>  
+ 	 	<welcome-file>index.html</welcome-file> 
+        <welcome-file>index.jsp</welcome-file>  
+    </welcome-file-list>
+ </web-app>

@@ -1,0 +1,123 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="images/sharing.ico" type="image/x-icon">
+		<link rel="stylesheet" href="styles/bootstrap.css" />
+		<link rel="stylesheet" href="styles/common.css" />
+		<script type="text/javascript" src="scripts/jquery-2.2.3.min.js" ></script>
+		<script type="text/javascript" src="scripts/bootstrap.min.js" ></script>
+		<title>H2ND-首页</title>
+		<script>
+			/*回到顶部*/
+			function backTotop(){
+			window.scroll(0,0)
+			}
+		</script>
+	</head> 
+	<body>
+		<!--  ==================================  -->
+		<!--  = header  =  -->
+		<!--  ==================================  -->
+		<!--导航条  顶部固定-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        		    <span class="icon-bar"></span>
+        		    <span class="icon-bar"></span>
+        		    <span class="icon-bar"></span>
+      			  </button>
+      			<!--网站标志，点击后回到网站首页-->
+			      <a class="navbar-brand" href="#">H2ND</a>
+			    </div>
+			    <!--当屏幕宽度太小，导航栏的内容会卷起来，按汉堡按钮显示，id=‘myNavbar’对应上面的data-target="#myNavbar"-->
+			    <div class="collapse navbar-collapse" id="myNavbar">
+			    	<!--导航栏左边-->
+			      <ul class="nav navbar-nav">
+			        <li class="active"><a href="#">首页</a></li>
+			        <li><a href="#">二手市场</a></li>
+			        <li><a href="#">求购市场</a></li>
+			        <li><a href="#">防骗攻略</a></li>
+			      </ul>
+			      <!--导航栏右边-->			      
+			      <ul class="nav navbar-nav navbar-right">
+			        <li><a href="#"><span class="glyphicon glyphicon-user"></span> 登录</a></li>
+      			  	<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span> 注册</a></li>
+			      </ul>
+			      <form  class="navbar-form navbar-right" role="search">
+					<div class="form-group">
+						<input id="search-frame" type="text" class="form-control" placeholder="看看有没有您想要的">
+					</div>
+					<button id="search-btn" class="btn btn-default">搜索</button>
+				  </form>
+			    </div>
+			  </div>			    
+		</nav>	
+		<!--  ================  -->
+		<!--  = body 内容  =  -->
+		<!--  ================  -->
+		<div class="container-fluid">
+			<div class="row">
+				<!--left sildebar-->
+				<div class="col-sm-2">
+					<ul id="categorybar" class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="55">
+						<li class="selected"><a name="0" href="#">所有商品</a></li>
+						<li><a name="1" href="#">热门商品</a></li>
+						<li><a name="2" href="#">数码产品</a></li>
+						<li><a name="3" href="#">代步工具</a></li>
+						<li><a href="#">书籍</a></li>
+						<li><a href="#">其他</a></li>
+					</ul>
+				</div>
+				
+				
+				<!--content-->
+				<div id="index-content" class="col-sm-8">
+					<!-- <div class="goods-msg">
+						goods picture
+						<a href="#">
+							<img src="images/goods.jpg" class="img-rounded goods-img" alt="没有图片哟"/>
+						</a>
+						goods description
+						<div>
+							<div class="goods-title">
+					  	<a href="#" title="现有全新未开封华为Mate8出售,快来买啊！！！"><span>现有全新未开封华为Mate8出售,快来买啊！！！</span></a>
+						 </div>
+						  <span class="goods-price">￥ 200</span>
+						  <span class="goods-focus">关注数  200</span>						  						  
+						</div>						
+					</div> -->
+			  </div>
+				
+				
+				<!--right sildebar-->
+				<div class="col-sm-2">
+					<ul id="sortbar" class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="55">
+						<li><a  href="#">人气<img name="DESC" src="images/ASC.svg" style="width:18%;display:none;"/></a></li>
+						<li><a  href="#">日期<img name="DESC" src="images/ASC.svg" style="width:18%;display:none;"/></a></li>
+						<li><a  href="#">价格<img name="DESC" src="images/ASC.svg" style="width:18%;display:none;"/></a></li>
+					</ul>
+					<button class="back-to-top" onclick="backTotop()">
+						<img src="images/backTotop.svg" alt="回到顶部"/>
+						<span style="text-align: center;">回顶部</span>
+					</button>
+				</div>
+			</div>			
+		</div>
+		
+		
+		<!--  ==========  -->
+		<!--  = footer =  -->
+		<!--  ==========  -->
+		<div class="footer container-fluid">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<span>下面没有内容了哦</span>
+				</div>	
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="scripts/common/index.js"></script>
+</html>

@@ -1,0 +1,261 @@
+body{
+	background-color: #E5E5E5;
+	padding-top: 50px;
+}
+.affix{top:55px;}
+
+/* ========== */
+/* = 通用样式 = */
+/* ========== */
+
+/*垂直导航条样式*/
+.nav.nav-pills li{
+	background-color: #FFF;
+	margin: 0;
+	padding: 5px;
+}
+/*回到顶部按钮样式*/
+.back-to-top{
+	position: fixed;
+	right: 0;
+	bottom: 10px;
+	height: 60px;
+	width: 60px;
+	background-color: #E5E5E5;
+	margin: 20px;
+	cursor:pointer;
+}
+button.back-to-top:focus{outline: none;}
+button.back-to-top:hover{
+	background-color: #5E5E5E;
+}
+.back-to-top img,.back-to-top span{
+	color: #5E5E5E;
+	font-weight: bold;
+	width: 85%;
+	height: 60%;
+	}
+/*页尾样式*/
+.footer{
+	background-color: #5E5E5E;
+	width: auto;
+	height: 300px;
+}
+/* ========== */
+/* = 首页样式 = */
+/* ========== */
+
+/*商品展示墙单元样式*/
+.goods-msg{
+	float:left;
+	background-color: #FFF;
+	width: 		250px;
+	height: 	300px;
+	margin: 	20px 10px;
+	padding: 	10px;
+	border: 	1px solid #000;
+	box-shadow:10px 10px 15px #000000;
+}
+/*商品照片*/
+.goods-msg .goods-img{
+	width: 230px;
+	height: 200px;
+}
+/*商品价格*/
+.goods-msg .goods-price{
+	clear: left;
+	display: block;
+	float:left;
+	color:#4CAE4C;
+	font-family: "微软雅黑";
+	font-size: 25px;
+	font-weight: bold;
+	padding-top: 5px;
+}
+/*关注数*/
+.goods-msg .goods-focus{
+	clear: right;
+	display: block;
+	float:right;
+	color:#9D9D9D;
+	font-family: "微软雅黑";
+	font-size: small;
+	padding-top: 15px;
+}
+/*商品标题，溢出部分用'...'代替*/
+.goods-title span{
+	display: block;
+	width: 200px;
+	white-space:nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/* ========== */
+/* = 商品页面样式 = */
+/* ========== */
+/*设置内容左模块高度和margin*/
+.goods-detail-left{
+	height: 1400px;
+	margin: 15px 0 15px 0;
+}
+/*
+ * 商品墙模块
+ * 
+ * */
+/*分类显示条样式*/
+.goods-nav{padding: 10px 0 0 10px;}
+.goods-nav a:link,
+.goods-nav a:visited,
+.goods-nav a:hover,
+.goods-nav a:active{color:#333;}
+.goods-nav span{color:#398439;}
+/*设置商品墙高度和背景色*/
+.goods-wall{
+	background-color:#FFF ;
+	height: 500px;
+/*	border:3px solid rgb(245,245,245);*/
+}
+/*照片墙向左浮动*/
+.goods-pictures{
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+/*小、大图div样式*/
+.goods-picture-large{
+	float:left; 
+	margin: 20px 0 0 20px;
+}
+.goods-picture-small{
+	float: right;
+	margin-top: 22px;
+	margin-right:45px ;
+}
+.goods-picture-small ul{padding:0; list-style-type: none;}
+/*大图img样式*/
+.goods-picture-large img{
+	width: 400px;
+	height:400px;
+}
+/*小图img样式*/
+.goods-picture-small img{
+	width:  65px;
+	height: 65px;
+	margin-bottom: 17px;
+	border: none;
+}
+/*第一个图被选中，边框为橙色*/
+.goods-picture-small li:first-child img{border: 3px solid #EC971F;}
+/*信息墙向右浮动*/
+.goods-message{
+	float: right;
+	width: 50%;
+	height: 100%;
+	margin-top:10px;
+}
+
+/*商品信息字体样式*/
+.goods-message span{
+	font-family: "微软雅黑";
+	font-size: 20px;
+}
+
+.goods-message tr td{
+	width: 500px;
+	height: 40px;
+}
+/*商品信息图标大小*/
+.goods-message td img{
+	width: 25px;
+	height: 25px;
+	margin-right: 10px;
+}
+/*商品信息表格背景色*/
+.goods-message tr:nth-child(even){background-color: #FFF;}
+/*1号按钮*/
+.goods-btn-1{
+	border-style:none ;
+	width: 100%;
+	height: 50px;
+}
+.goods-btn-1 img{
+	width: 42px;
+	height: 42px;
+	margin-right: 15px;
+}
+/*2号按钮*/
+.goods-btn-2{
+	width: 80px;
+	height: 40px;
+}
+.goods-btn-2 img{
+	width: 22px;
+	height: 22px;
+	margin-right: 5px;
+}
+/*"我想交易"按钮div*/
+#goods-btn-div1{
+	padding: 10px 0;
+}
+/*"关注"、"举报"按钮div*/
+#goods-btn-div2{
+	margin-top: 25px;
+	padding: 10px;
+}
+/*
+ * 商品推荐模块
+ * 
+ * */
+.recommend{margin-top: 20px;}
+.carousel-control{width: 5%;}
+.carousel-inner .item{ margin: auto; padding-left: 1%; }
+.recommendItemList li{
+	background-color: #FFF;
+	display: inline-block;
+	list-style-type: none;
+	width: 23.5%;
+	height: 289px;
+}
+.hd{width:100%;height: 80%;}
+.bd{height: 20%;}
+.carousel-inner > .item  img,
+.carousel-inner > .item > a  img {
+  width: 	100%;
+  height: 100%;
+}
+.name a span{
+	display: inline-block;
+	width: 100px;
+	white-space:nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.recommendItemList .bd h4,
+.recommendItemList .bd p{
+	text-align: center;
+	margin-bottom: 0;
+}
+.recommendItemList .bd h4 > a:link,
+.recommendItemList .bd h4 > a:visited{
+	color: #000000;
+	text-decoration: none;
+}
+.recommendItemList .bd h4 > a:hover{
+	color: #398439;
+	text-decoration: none;
+}
+
+/*
+ * 商品详情、留言模块
+ * 
+ * */
+.goods-board{
+	background-color:#FFF ;
+	height: 500px;
+	margin-top: 20px;
+	border:3px solid rgb(245,245,245);
+}
+.goods-board ul{
+	background-color: rgb(245,245,245);
+}
+.tab-pane{padding: 15px;}
