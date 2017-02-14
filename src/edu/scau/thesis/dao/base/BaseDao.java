@@ -1,12 +1,13 @@
 package edu.scau.thesis.dao.base;
 
 import java.io.Serializable;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
-import javax.transaction.Transactional;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -20,9 +21,21 @@ import edu.scau.thesis.utils.Utils;
 public class BaseDao<T extends BasePOJO> implements IBaseDao<T>{
 	@Resource(name="sessionFactory")
 	private SessionFactory sessionFactory;
+	private Class<T> clazz;
+    private String className;
+    public BaseDao(){
+        this.clazz =null;
+        Class c =getClass();
+        Type t =c.getGenericSuperclass();
+        if(t instanceof ParameterizedType){
+            Type[] p =((ParameterizedType)t).getActualTypeArguments();
+            this.clazz =(Class<T>) p[0];
+        }
+        this.className =clazz.getSimpleName();
+
+    }
 	public Session getsesSession(){
         Session session=sessionFactory.getCurrentSession();
-//        session.setFlushMode(FlushModeType.COMMIT);
         return session;
     }
 	@Override
@@ -38,11 +51,9 @@ public class BaseDao<T extends BasePOJO> implements IBaseDao<T>{
 		if(StringUtils.isEmpty(entity.getId())){
 			entity.setId(Utils.newUUID());
 			getsesSession().save(entity);
-			//getsesSession().flush();
 		}
 		else{
 			getsesSession().saveOrUpdate(entity);
-			//getsesSession().flush();
 		}
 		
 	}
@@ -53,10 +64,8 @@ public class BaseDao<T extends BasePOJO> implements IBaseDao<T>{
 			if (null==t.getId()){
                 t.setId(Utils.newUUID());
                 save(t);
-                //getsesSession().flush();
             }else {
                 getsesSession().saveOrUpdate(t);
-                //getsesSession().flush();
             }
 		}
 	}
@@ -64,8 +73,6 @@ public class BaseDao<T extends BasePOJO> implements IBaseDao<T>{
 	@Override
 	public void delete(T entity) throws DataAccessException {
 		getsesSession().delete(entity);
-		//getsesSession().flush();
-		
 	}
 
 	@Override
@@ -115,6 +122,10 @@ public class BaseDao<T extends BasePOJO> implements IBaseDao<T>{
             };
         }
         return query.list();
+	}
+	@Override
+	public T load(Serializable id) throws DataAccessException {
+		return (T)getsesSession().load(clazz, id);
 	}
 
 

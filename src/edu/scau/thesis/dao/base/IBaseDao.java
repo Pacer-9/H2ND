@@ -18,4 +18,5 @@ public interface IBaseDao<T> {
 	public List<T> find(String hql) throws DataAccessException;
     public List<T> find(String hql,Object[] objs) throws DataAccessException;
     public List<T> find(String hql,Map<Object,Object> params) throws DataAccessException;
+    public T load(Serializable id) throws DataAccessException;
 }

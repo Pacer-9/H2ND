@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>上传结果</title>
+<title>404-NOT FOUND</title>
 </head>
 <body>
-	<%-- <img alt="" src="${fileUrl}" />  --%>
-	ok
-	<h1>${msg}</h1>
+	<h3>404-NOT FOUND</h3>
+	<h4 class="errorMessage">${errorMsg}</h4>
 </body>
 </html>

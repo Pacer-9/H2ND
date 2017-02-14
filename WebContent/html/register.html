@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>H2ND-注册账号</title>
+	<link rel="shortcut icon" href="../images/sharing.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../styles/bootstrap.css" />
+	<link rel="stylesheet" href="../styles/plugins/buttons.css" />
+	<link rel="stylesheet" href="../styles/plugins/bootstrapValidator.min.css" />
+	<link rel="stylesheet" href="../styles/common/register.css" />
+	<script type="text/javascript" src="../scripts/jquery-2.2.3.min.js" ></script>
+	<script type="text/javascript" src="../scripts/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="../scripts/plugins/bootstrapValidator.min.js" ></script>
+	<script type="text/javascript" src="../scripts/common/register.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-lg-offset-8">
+				<form action="/Thesis/user/register.do" class="required-validate" method="post">
+					<div class="form-group">
+						<label for="user-account">账号</label>
+						<input type="text" class="form-control input-lg" id="user-account" name="userAccount" placeholder="用户账号" maxlength="16" autocomplete="off">
+					</div>
+					<div class="form-group">
+						<label for="user-password">密码</label>
+						<input type="password" class="form-control input-lg" id="user-password" name="password" placeholder="6-16位密码，区分大小写" maxlength="16" autocomplete="off">
+					</div>
+					<div class="form-group">
+						<label for="confirm-password">确认密码</label>
+						<input type="password" class="form-control input-lg" id="confirm-password" name="confirmPassword" placeholder="再次输入密码" maxlength="16" autocomplete="off">
+					</div>
+					<div class="form-group">
+						<label for="user-telephone">手机号码</label>
+						<input type="text" class="form-control input-lg" id="user-telephone" name="telephoneNumber" placeholder="11位手机号，默认联系方式" maxlength="11" autocomplete="off">
+					</div>
+					<div>
+						<button id="btn-register-submit" class="button button-action button-large" type="submit">注册</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,232 @@
+.f-left {float: left;}
+.f-right {float: right;}
+.m-body {margin-top: 30px;}
+.panel-left {
+	width: 180px;
+	height: 480px;
+	border: 2px solid #E8E8E8;
+}
+.panel-right {
+	width: 890px;
+	min-height: 480px;
+	border: 2px solid #E8E8E8;
+	margin-left: 20px;
+}
+.l-userInfo {
+	text-align:center;
+	margin:29px 0 17px 0;
+}
+.menu {
+	border-top: 1px dashed #d2d2d2;
+	width: 140px;
+	padding: 30px 0 15px;
+	margin: 0 auto;
+}
+.menu .menu-item {
+	margin-bottom: 15px;
+	text-align: center;
+	display: block;
+}
+a {
+	color: #333;
+}
+a:hover, a:focus {
+	color: #C0A16B;
+	text-decoration: none;
+	outline: none;
+}
+
+.icon-camera img {
+	width: 30px;
+	height: 25px;
+}
+.icon-camera {
+	width: 30px;
+	height: 25px;
+	position: relative;
+	bottom: 35px;
+	left: 111px;
+	z-index: 3;
+}
+/*个人信息*/
+.r-userInfo {padding: 40px 0;}
+
+.userInfo-form, 
+.userInfo-form .item .r-input,
+.userInfo-form .item .r-textarea {
+	font-size: 15px;
+	font-family: "微软雅黑";
+}
+.userInfo-form .item {
+	margin-left: 60px;
+	margin-bottom: 20px;
+	height: 34px;
+	line-height: 34px;
+}
+.userInfo-form .profile {
+	height: 100px;
+	line-height: 34px;
+}
+.userInfo-form .item .r-label {width:60px;}
+.userInfo-form .item .content {margin-left: 48px;}
+.userInfo-form .item .r-textarea {
+	resize:none;
+	width: 500px;
+
+}
+.userInfo-form .item .r-input {
+	width: 165px;
+	height: 34px;
+}
+.userInfo-form .validate-msg {margin-left:20px;}
+.userInfo-form .msg-result {
+	margin:10px 20px;
+	color:red;
+}
+/*商品管理*/
+.content-empty,.content-nonempty {display: none;}
+.goodsManage-nav {border-bottom: 1px solid #E8E8E8;}
+.nav.nav-pills {background-color: #F5F5F5;}
+.nav-pills > li {
+	width: 112px;
+	text-align: center;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+	color: #fff;
+	background-color: #ACE046;
+}
+.content-empty {
+	width: 300px;
+	height: 300px;
+	text-align: center;
+	margin: auto;
+}
+.icon-empty {margin: 50% 0 10px 0;}
+.p-empty{font-size: large;} 
+.a-publish > a {
+	color: #0000FF;
+	font-size: 15px;
+	text-decoration: underline;
+}
+.a-publish > a:hover {color: #C0A16B;text-decoration: none;}
+
+.panel-body {height: 152px;}
+.panel-title .badge {margin-right: 10px;}
+.content-nonempty .panel {
+	margin: 10px 5px;
+}
+.content-nonempty .content-img {
+	width: 104px;
+	height: 104px;
+	border: 2px solid #E8E8E8;
+}
+.content-nonempty .content-message { 
+	height: 104px;
+	width: 650px;
+}
+.content-items {
+	position: relative;
+	bottom: -16px;
+}
+.content-item {
+	font-size: 15px;
+	vertical-align: middle;
+}
+.content-item > img {
+	width: 15px;
+	height: 15px;
+	margin: 0 2px 0 27px;
+}
+.content-description {
+	height: 50px;
+	padding-left: 27px;
+	margin-top: 5px;
+}
+.content-description .description-words {
+	width: 85%;
+	height: 60px;
+	padding: 8px 10px;
+}
+.content-description .description-words span{
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+.content-btn {
+	width: 80px;
+	height: 100px;
+	border-left:3px dotted #E8E8E8;
+	overflow: hidden;
+}
+.content-btn .m-btn {
+	margin: 12px 5px;
+}
+.content-tips {
+	width: 100%;
+	margin-top: 5px;
+	color: #13227A;
+	text-align: center;
+}
+.a-collapse:link {color: #3C763D;}
+.a-collapse:hover {color: #13227A;}
+.modal-header {
+	background-color: #4CAF50;
+	color:#FFF;
+}
+.modal-tips .modal-body {height: 150px;}
+.icon-drop {
+
+}
+/*收藏夹*/
+.collection {width: 100%;}
+.collection .collection-title {
+	padding-left: 20px;
+	height: 49px;
+	border-bottom: 1px solid #eaeaea;
+	background-color: #f5f5f5;
+	font-size: 18px;
+	color: #333;
+	line-height: 48px;
+}
+.collection .collection-content {
+	min-height: 430px;
+}
+.collection .collection-list {
+	min-height: 430px;
+	width: 100%;
+	padding: 0 4px 40px;
+}
+.collection .collection-list .collection-item {
+	float: left;
+	width: 210px;
+	margin-top: 20px;
+	padding: 0 10px;
+	list-style-type: none;
+}
+.collection .collection-product {
+	position: relative;
+	width: 190px;
+	font-size: 14px;
+	text-align: center;
+}
+.collection .collection-production .hd {
+	margin-bottom: 10px;
+	border: 1px solid #000000;
+}
+.collection .collection-production img {
+	width: 190px;
+	height: 190px;
+}
+.collection .collection-production .title {
+	margin-bottom: 4px;
+	padding: 0 10px;
+	text-align: center;
+}
+.collection .collection-production .bd p {
+	margin: 0 0 10px;
+	padding: 0 10px;
+	text-align: center;
+	font-size: 18px;	
+	color: red;
+}

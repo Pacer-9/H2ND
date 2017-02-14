@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>发布商品</title>
+		<link rel="shortcut icon" href="../images/sharing.ico" type="image/x-icon">
+		<link rel="stylesheet" href="../styles/bootstrap.min.css" />
+		<link rel="stylesheet" href="../styles/plugins/fileinput.css" />
+		<link rel="stylesheet" href="../styles/plugins/buttons.css" />
+		<link rel="stylesheet" href="../styles/plugins/bootstrapValidator.min.css" />
+		<link rel="stylesheet" href="../styles/common/goods-release.css" />
+		<script type="text/javascript" src="../scripts/jquery-2.2.3.min.js" ></script>
+		<script type="text/javascript" src="../scripts/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="../scripts/plugins/fileinput.min.js"></script>
+		<script type="text/javascript" src="../scripts/plugins/fileinput-locale-zh.js" ></script>	
+		<script type="text/javascript" src="../scripts/plugins/bootstrapValidator.min.js" ></script>
+		<script type="text/javascript" src="../scripts/common/goods-release.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-lg-offset-2">
+					<form action="/Thesis/release/submit.do" class="required-validate" method="post" enctype="multipart/form-data">
+					  <div class="form-group">
+					    <label for="goods-title">商品标题</label>
+					    <input type="text" class="form-control input-lg" id="goods-title" name="item_title" placeholder="请输入商品标题" autofocus autocomplete="off">
+					  </div>
+					  <!-- <div>
+					  	<label for="goods-price">商品价格</label>
+					  </div> 
+					  <div class="input-group input-group-lg form-group">		
+						<input type="text" class="form-control" id="goods-price" name="price" placeholder="请输入合适的价格" aria-describedby="sizing-addon1" maxlength="8" autocomplete="off">
+						<span class="input-group-addon" id="sizing-addon1">￥</span>  	  
+					  </div> -->
+					  <div class="form-group">	
+					  	<label for="goods-price">商品价格</label>
+						  <input type="text" class="form-control input-lg" id="goods-price" name="price" placeholder="请输入合适的价格" maxlength="8" autocomplete="off">
+					  </div>
+					  <div class="form-group">
+					    <label for="goods-trans-address">交易地点</label>
+					    <input type="text" class="form-control input-lg" id="goods-trans-address" name="location" placeholder="请输入交易地点" autocomplete="off">
+					  </div>				  
+					  <div class="form-group">
+					    <label for="goods-category">商品分类</label>
+					    <select class="form-control input-lg" id="goods-category" name="categoryId" autocomplete="off">
+								<option value="">点击选择分类</option>
+							</select><br>
+					  </div>
+					  <div class="form-group">
+					    <label for="owner-tel">手机号码</label>
+					    <input type="tel" class="form-control input-lg" id="owner-tel" name="telephoneNumber" placeholder="请留下手机号码" maxlength="11" autocomplete="off">
+					  </div>
+					  <div class="form-group">
+					    <label for="owner-social-account">社交账号</label>
+					    <input type="text" class="form-control input-lg" id="owner-social-account" name="socialAccount" placeholder="输入QQ、微信等联系方式" maxlength="20" autocomplete="off">
+					  </div>
+					  <div class="form-group">
+					    <label for="goods-description">商品详情</label>
+					    <textarea class="form-control input-lg" id="goods-description" name="item_description" rows="4" placeholder="介绍一下您的宝贝吧（最多200字）" maxlength="200" autocomplete="off"></textarea>
+					    <span id="words-num">已输入0个字，还能输入200个字</span>
+					  </div>
+						<label class="control-label">商品图片(默认第一张图片为商品封面，包括封面在内最多可上传6张照片)</label>
+				    	<input id="picture-upload"  class="file-loading" name="files" type="file" multiple accept="image/png,image/jpeg" data-max-file-count="6">
+				    	<div id="errorBlock" class="help-block"></div>
+				    	<br>
+				      <div class="col-lg-8 col-lg-offset-3" id="submit-btns">
+				    	<button id="btn-release-submit" class="button button-glow button-rounded button-raised button-primary button-large" type="submit" style="margin-left: 30px;">发布</button>
+				    	<button id="btn-release-cancel" class="button button-glow button-rounded button-raised button-caution button-large" style="margin-left: 30px;">取消</button>
+				      </div>
+				    
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

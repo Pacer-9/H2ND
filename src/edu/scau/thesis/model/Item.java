@@ -1,14 +1,22 @@
 package edu.scau.thesis.model;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import edu.scau.thesis.model.base.BasePOJO;
 
@@ -20,6 +28,7 @@ import edu.scau.thesis.model.base.BasePOJO;
 @Entity
 @Table(name="SECONDHAND_ITEM")
 public class Item extends BasePOJO{
+	private static final long serialVersionUID = 1L;
 	@Id@Column(name="ID")
 	@GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
@@ -36,12 +45,14 @@ public class Item extends BasePOJO{
 	//商品描述
 	@Column(name="DESCRIPTION")
 	private String item_description;
-	//商品拥有者的用户id
-	@Column(name="USERID")
-	private String UserID;
+	//商品拥有者
+	@ManyToOne(cascade={CascadeType.MERGE})
+	@JoinColumn(name="USERID")
+	private User user;
 	//商品的类别id
-	@Column(name="CATEGORYID")
-	private int categoryID;
+	@ManyToOne(cascade={CascadeType.MERGE})
+	@JoinColumn(name="CATEGORYID")
+	private Category category;
 	//交易地点
 	@Column(name="LOCO")
 	private String location;
@@ -51,21 +62,28 @@ public class Item extends BasePOJO{
 	//商品发布日期
 	@Column(name="P_DATE")
 	private Date public_date;
+	//商品交易/下架日期
+	@Column(name="o_date")
+	private Date off_date;
 	//关注数
 	@Column(name="F_NUM")
 	private int focus_number;
+	//商品图片
+	@OneToMany(cascade={CascadeType.ALL})
+	@JoinColumn(name="item_id")
+	private Collection<Picture> pictures = new ArrayList<Picture>();
+	//手机号码
+	@Column(name="TELE_NUM")
+	private String telephoneNumber;
+	//社交账号（QQ、微信等等）
+	@Column(name="S_ACCOUNT")
+	private String socialAccount;
 	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
 		this.id = id;
 	}
-/*	public String getItemID() {
-		return itemID;
-	}
-	public void setItemID(String itemID) {
-		this.itemID = itemID;
-	}*/
 	public String getItem_title() {
 		return item_title;
 	}
@@ -84,17 +102,18 @@ public class Item extends BasePOJO{
 	public void setItem_description(String item_description) {
 		this.item_description = item_description;
 	}
-	public String getUserID() {
-		return UserID;
+	@JsonIgnore
+	public User getUser() {
+		return user;
 	}
-	public void setUserID(String userID) {
-		UserID = userID;
+	public void setUser(User user) {
+		this.user = user;
 	}
-	public int getCategoryID() {
-		return categoryID;
+	public Category getCategory() {
+		return category;
 	}
-	public void setCategoryID(int categoryID) {
-		this.categoryID = categoryID;
+	public void setCategory(Category category) {
+		this.category = category;
 	}
 	public String getLocation() {
 		return location;
@@ -114,11 +133,36 @@ public class Item extends BasePOJO{
 	public void setPublic_date(Date public_date) {
 		this.public_date = public_date;
 	}
+	
+	public Date getOff_date() {
+		return off_date;
+	}
+	public void setOff_date(Date off_date) {
+		this.off_date = off_date;
+	}
 	public int getFocus_number() {
 		return focus_number;
 	}
 	public void setFocus_number(int focus_number) {
 		this.focus_number = focus_number;
 	}
-
+	public Collection<Picture> getPictures() {
+		return pictures;
+	}
+	public void setPictures(Collection<Picture> pictures) {
+		this.pictures = pictures;
+	}
+	public String getTelephoneNumber() {
+		return telephoneNumber;
+	}
+	public void setTelephoneNumber(String telephoneNumber) {
+		this.telephoneNumber = telephoneNumber;
+	}
+	public String getSocialAccount() {
+		return socialAccount;
+	}
+	public void setSocialAccount(String socialAccount) {
+		this.socialAccount = socialAccount;
+	}
+	
 }

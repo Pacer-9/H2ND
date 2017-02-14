@@ -3,30 +3,20 @@
 	<head>
 		<meta charset="utf-8"></meta>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" href="../images/sharing.ico" type="image/x-icon">
-		<link rel="stylesheet" href="../styles/bootstrap.css" />
-		<link rel="stylesheet" href="../styles/common.css" />
-		<link rel="stylesheet" href="../styles/plugins/bootstrap-magnify.css" />
-		<script type="text/javascript" src="../scripts/jquery-2.2.3.min.js" ></script>
-		<script type="text/javascript" src="../scripts/bootstrap.min.js" ></script>
-		<script type="text/javascript" src="../scripts/plugins/bootstrap-magnify.js"></script>
-		<script type="text/javascript" src="../scripts/common/goods-detail.js" ></script>
-		<!--
-			XXX为商品标题
-        -->
-		<title>Huawei Honor-H2ND</title>
-		<script>
-			/*tab转换*/
-			$(document).ready(function(){
-			    $(".nav-tabs a").click(function(){
-			        $(this).tab('show');
-			    });
-			});
-			/*轮播图初始化*/
-			$('#myCarousel').carousel();
+		<title>H2ND</title>
+		<link rel="shortcut icon" href="/Thesis/images/sharing.ico" type="image/x-icon">
+		<link rel="stylesheet" href="/Thesis/styles/bootstrap.css" />
+		<link rel="stylesheet" href="/Thesis/styles/common.css" />
+		<link rel="stylesheet" href="/Thesis/styles/plugins/bootstrap-magnify.css" />
+		<script type="text/javascript" src="/Thesis/scripts/jquery-2.2.3.min.js" ></script>
+		<script type="text/javascript" src="/Thesis/scripts/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="/Thesis/scripts/plugins/bootstrap-magnify.js"></script>
+		<script type="text/javascript" src="/Thesis/scripts/common/CommonFunction.js" ></script>		
+		<script type="text/javascript" src="/Thesis/scripts/common/goods-detail.js" ></script>	
+		<script type="text/javascript">
 			/*回到顶部*/
 			function backTotop(){
-			window.scroll(0,0)
+				window.scroll(0,0)
 			}
 		</script>
 	</head> 
@@ -44,13 +34,13 @@
         		    <span class="icon-bar"></span>
       			  </button>
       			<!--网站标志，点击后回到网站首页-->
-			      <a class="navbar-brand" href="#">H2ND</a>
+			      <a class="navbar-brand" href="/Thesis/index.html">H2ND</a>
 			    </div>
 			    <!--当屏幕宽度太小，导航栏的内容会卷起来，按汉堡按钮显示，id=‘myNavbar’对应上面的data-target="#myNavbar"-->
 			    <div class="collapse navbar-collapse" id="myNavbar">
 			    	<!--导航栏左边-->
 			      <ul class="nav navbar-nav">
-			        <li class="active"><a href="#">首页</a></li>
+			        <li class="active"><a href="/Thesis/index.html">首页</a></li>
 			        <li><a href="#">二手市场</a></li>
 			        <li><a href="#">求购市场</a></li>
 			        <li><a href="#">防骗攻略</a></li>
@@ -74,8 +64,8 @@
 		<!--导航栏-->
 		<div class="goods-nav">
 			<div class="row">
-				<div class="col-sm-10 col-sm-offset-1">
-					<a href="#">首页</a> &gt; <a href="#">分类</a> &gt; <span>Huawei Honor</span>
+				<div id="daohang" class="col-sm-10 col-sm-offset-1">
+					<a href="/Thesis/index.html">首页</a> &gt; <a href="#">分类</a>(待定)
 				</div>
 			</div>
 		</div>
@@ -95,30 +85,30 @@
 							<div class="goods-pictures">
 								<!--大图-->
 								<div class="goods-picture-large">									
-										<img class="img-thumbnail" src="../images/goods.jpg" data-toggle="magnify" alt="没有商品图片"/>
+										<img class="img-thumbnail" src="#" data-toggle="magnify" alt="没有商品图片"/>
 								</div>
 								<!--小图-->
 								<div class="goods-picture-small">
 									<ul>
-										<li><img id="small-picture-1" src="../images/goods.jpg" alt="空白" /></li>
+										<!-- <li><img id="small-picture-1" src="../images/goods.jpg" alt="空白" /></li>
 										<li><img id="small-picture-2" src="../images/goods-1.jpg" alt="空白" /></li>
 										<li><img id="small-picture-3" src="../images/goods-2.jpg" alt="空白" /></li>
 										<li><img id="small-picture-4" src="../images/goods-3.jpg" alt="空白" /></li>
-										<li><img id="small-picture-5" src="../images/goods-3.jpg" alt="空白" /></li>
+										<li><img id="small-picture-5" src="../images/goods-3.jpg" alt="空白" /></li> -->
 									</ul>		
 								</div>
 							</div>
 							<!--商品信息-->
 							<div class="goods-message">
 								<table>
-									<tr><td id="goods-name"><span>Huawei Honor</span></td></tr>
-									<tr><td id="goods-price"><span title="商品价格"><img src="../images/price.svg"/>2999</span></td></tr>
-									<tr><td id="user-name"><a href="#" title="了解卖家"><span><img src="../images/owner.svg"/>X-man</span></a></td></tr>
-									<tr><td id="tel"><span title="手机号码"><img src="../images/telephone.svg"/>XXX-XXXX-XXXX</span></td></tr>
-									<tr><td id="social-account"><span title="QQ号码"><img src="../images/QQ.svg"/>xxxxxxxxx</span></td></tr>
-									<tr><td id="trans-address"><span title="交易地点"><img src="../images/address.svg"/>随便哪里交货</span></td></tr>
-									<tr><td id="authentication"><span title="用户认证"><img src="../images/authentication.svg"/>未认证</span></td></tr>
-									<tr><td id="publish-date"><span title="商品发布日期"><img src="../images/date.svg"/>2016-11-30</span></td></tr>
+									<tr><td id="goods-name"><span></span></td></tr>
+									<tr><td id="goods-price"><span title="商品价格"><img src="../images/price.svg"/></span></td></tr>
+									<tr><td id="user-name"><a href="#" title="了解卖家"><span><img src="../images/owner.svg"/></span></a></td></tr>
+									<tr><td id="tel"><span title="手机号码"><img src="../images/telephone.svg"/></span></td></tr>
+									<tr><td id="social-account"><span title="QQ号码"><img src="../images/QQ.svg"/></span></td></tr>
+									<tr><td id="trans-address"><span title="交易地点"><img src="../images/address.svg"/></span></td></tr>
+									<tr><td id="authentication"><span title="用户认证"><img src="../images/authentication.svg"/></span></td></tr>
+									<tr><td id="publish-date"><span title="商品发布日期"><img src="../images/date.svg"/></span></td></tr>
 								</table>
 								<div id="goods-btn-div1">
 							  	<button type="button" class="btn btn-success goods-btn-1" id="buy"><span><img src="../images/shopping.svg"/>I Wanna It</button>
@@ -287,7 +277,7 @@
 							<div class="tab-content">
 						    <div id="description" class="tab-pane fade in active">
 						      <h3>卖家有话说</h3>
-						      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						      <h1>“</h1><p>很遗憾，神秘的卖家没留下什么信息。</p><h1>”</h1>
 						    </div>
 						    <div id="message_board" class="tab-pane fade">
 						      <h3>买家有话说</h3>

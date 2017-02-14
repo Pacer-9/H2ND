@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+						<!--
+                        	作者：786033389@qq.com
+                        	时间：2017-02-06
+                        	描述：个人信息
+                        	位置：<div class="panel-right"></div>
+                        -->					
+						<div class="r-userInfo">
+	    					<form class="userInfo-form">
+	    						<div class="item">
+	    							<label class="r-label f-left">账号</label>
+	    							<div class="content f-left">XXXXXX</div>
+	    						</div>
+	    						<div class="item">
+	    							<label class="r-label f-left">昵称</label>
+	    							<div class="form-group content f-left">
+									    <input class="form-control r-input" name="username" value="XXXXXXXX" autocomplete="off" maxlength="20"/>
+									  </div>
+	    						</div>
+	    						<div class="item">
+	    							<label class="r-label f-left">手机号码</label>
+	    							<div class="form-group content f-left">
+									    <input class="form-control r-input" name="telephoneNumber" value="18820957613" autocomplete="off" maxlength="11"/>
+									  </div>
+	    						</div>
+	    						<div class="item">
+	    							<label class="r-label f-left">QQ</label>
+	    							<div class="form-group content f-left">
+									    <input class="form-control r-input" name="socialAccount" value="786088865" autocomplete="off" maxlength="12"/>
+									  </div>
+	    						</div>
+	    						<div class="item profile">
+	    							<label class="r-label f-left">个人简介</label>
+	    							<div class="form-group content f-left">
+									    <textarea class="form-control input-lg r-textarea" id="goods-description" name="profile" rows="3" cols="60" maxlength="200" autocomplete="off"></textarea>
+									    <!--<span id="words-num">已输入0个字，还能输入200个字</span>-->
+									  </div>
+	    						</div>
+	    						<div class="item">
+	    							<label class="r-label f-left"></label>
+	    							<div class="content f-left"><button type="submit" class="button button-glow button-rounded button-raised button-action button-large">保存</button></div>
+	    						</div>
+	    					</form>
+	    				</div>
+    				<!--
+                    	作者：786033389@qq.com
+                    	时间：2017-02-06
+                    	描述：商品管理
+                    	位置：<div class="panel-right"></div>
+                    -->
+            <!--tab-->
+            		  <div class="goodsManage-nav">
+	    				<ul class="nav nav-pills">
+						    <li class="active"><a data-toggle="pill" href="#home">上架中<span class="badge">0</span></a></li>
+						    <li><a data-toggle="pill" href="#menu1">已交易</a></li>
+						    <li><a data-toggle="pill" href="#menu2">已下架</a></li>
+						  </ul>
+					  </div>
+					  <!--Empty content-->
+					  <div class="tab-content goodsManage-content">
+					    <div id="home" class="tab-pane fade in active">
+					      <div class="content-empty">
+					      	<img class="icon-empty" src="../images/empty-goods.svg" alt="图片" />
+					      	<p class="p-empty">您的货架上空着呢</p>
+					      	<div class="a-publish"><a href="#">+发布商品</a></div>      	
+					      </div>
+					    </div>
+					    <div id="menu1" class="tab-pane fade">
+					      <div class="content-empty">
+					      	<img class="icon-empty" src="../images/empty-traded.svg" alt="图片" />
+					      	<p class="p-empty">没有已交易的商品呢</p>
+					      </div>
+					    </div>
+					    <div id="menu2" class="tab-pane fade">
+					      <div class="content-empty">
+					      	<img class="icon-empty" src="../images/empty-expired.svg" alt="图片" />
+					      	<p class="p-empty">没有下架的商品呢</p>
+					      </div>
+					    </div>
+					  </div>
+					  <!--					  	
+					  	描述：Nonempty content 商品信息板块模板
+					  	位置：<div id="home" class="tab-pane fade in active"></div>
+					  -->
+					  <div id="accordion" class="content-nonempty">
+					      	<!--content start-->
+					      	<div class="panel panel-success">
+					      		<div class="panel-heading">
+									    <a class="a-collapse" href="#content-1" data-toggle="collapse" data-parent="#accordion">
+									    	<h3 class="panel-title">
+									    		<span class="badge">代步工具</span>马自达电动车
+									    		<div class="icon-drop f-right">
+									    			<img src="../images/icon-dropup.svg" alt="icon" height="15px" width="15px"/>
+									    		</div>
+									    	</h3>							  	
+									    </a>
+					      		</div>
+					      		
+										<div id="content-1" class="panel-body collapse in">
+										  <div class="content-img f-left">
+										  	<img src="../images/avatar-01.jpg"  alt="封面图片" height="100" width="100"/>
+										  </div>
+										  <div class="content-message f-left">
+										    <div class="content-description">
+										    		<div class="description-icon f-left"><img src="../images/description.svg" title="商品描述" alt="图标" height="50" width="50"/></div>
+										    		<div class="description-words f-left"><span>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</span></div>
+										    </div>
+										    <div class="content-items">
+										    		<span title="价格" class="content-item"><img src="../images/price.svg"/ >666</span>
+											    	<span title="交易地点" class="content-item"><img src="../images/address.svg"/>西园</span>
+											    	<span title="手机号码" class="content-item"><img src="../images/telephone.svg"/>188XXXX2014</span>
+											    	<span title="QQ" class="content-item"><img src="../images/QQ.svg"/>7860XXX89</span>
+											    	<span title="关注数" class="content-item"><img src="../images/focus.svg"/>0</span>
+											    	<span title="上架日期" class="content-item"><img src="../images/../images/date.svg"/>2017-02-06</span>
+										    	</div>						
+										  </div>
+										  <div class="content-btn f-right">
+										    <div class="m-btn">
+										    	<a id="btn-offsale" href="#modal-offsale" data-toggle="modal"><img src="../images/goods-offSale.svg" alt="icon" height="30" width="30"/>下架</a>
+										    </div>
+										    <div class="m-btn">
+										    	<a id="btn-edit" href="#modal-edit" data-toggle="modal"><img src="../images/goods-edit.svg" alt="icon" height="30" width="30"/>编辑</a>
+										    </div>									    	
+										  </div> 
+										  <div class="content-tips f-left">
+												<span>距离自动下架还有90天</span>
+						 					</div>
+										</div>	
+									  
+					      	</div>
+					      	<!--content end-->
+					      	
+					      	<!--content start-->
+					      	<div class="panel panel-success">
+					      		<div class="panel-heading">
+									    <a class="a-collapse" href="#content-2" data-toggle="collapse" data-parent="#accordion">
+									    	<h3 class="panel-title">
+									    		<span class="badge">代步工具</span>马自达电动车
+									    		<div class="icon-drop f-right">
+									    			<img class="dropdown" src="../images/icon-dropdown.svg" alt="icon" height="15px" width="15px"/>
+									    		</div>
+									    	</h3>
+									    </a>
+									  </div>							  
+									  <div id="content-2" class="panel-body collapse">
+										  <div class="content-img f-left">
+										  	<img src="../images/avatar-03.jpg"  alt="封面图片" height="100" width="100"/>
+										  </div>
+										  <div class="content-message f-left">
+										    <div class="content-description">
+										    		<div class="description-icon f-left"><img src="../images/description.svg" title="商品描述" alt="图标" height="50" width="50"/></div>
+										    		<div class="description-words f-left">
+										    			<span>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</span>							    			
+										    		</div>
+										    		
+										    </div>
+										    <div class="content-items">
+										    		<span title="价格" class="content-item"><img src="../images/price.svg"/ >666</span>
+											    	<span title="交易地点" class="content-item"><img src="../images/address.svg"/>西园</span>
+											    	<span title="手机号码" class="content-item"><img src="../images/telephone.svg"/>188XXXX2014</span>
+											    	<span title="QQ" class="content-item"><img src="../images/QQ.svg"/>7860XXX89</span>
+											    	<span title="关注数" class="content-item"><img src="../images/focus.svg"/>0</span>
+											    	<span title="上架日期" class="content-item"><img src="../images/../images/date.svg"/>2017-02-06</span>
+										    	</div>						
+										  </div>
+										  <div class="content-btn f-right">
+										    <div class="m-btn">
+										    	<a id="btn-offsale" href="#modal-offsale" data-toggle="modal"><img src="../images/goods-offSale.svg" alt="icon" height="30" width="30"/>下架</a>
+										    </div>
+										    <div class="m-btn">
+										    	<a id="btn-edit" href="#modal-edit" data-toggle="modal"><img src="../images/goods-edit.svg" alt="icon" height="30" width="30"/>编辑</a>
+										    </div>									    	
+										  </div>
+										  <div class="content-tips f-left">
+												<span>距离自动下架还有90天</span>
+						 					</div>
+										</div>				
+									</div>		
+									<!--content end-->									
+						</div>
+						<!-- 
+							描述：收藏夹
+							位置：<div class="panel-right"></div>
+						 -->
+						 <div class="collection">
+	    					<div class="collection-title">    					
+	    						收藏夹(<span class="collectionNum">0</span>)   					
+	    					</div>	
+		    				<div class="collection-content">
+		    					<div class="collection-list">
+		    						<div class="collection-item">
+		    							<div class="collection-production">
+		    								<div class="hd">
+		    									<a href=""><img src="/Thesis/pictureServicer/goods/1486039925034.jpg" alt="picture" /></a>
+		    								</div>
+		    								<div class="bd">
+		    									<h4 class="title"><a href="">XXXXXXX</a></h4>
+		    									<p class="price"><span>￥ 666</span></p>
+		    								</div>
+		    							</div>
+		    						</div>	    						
+		    						<div class="clearfix"></div>	
+		    					</div>   					
+		    				</div>    					
+	    				</div>
+    <!--
+    	模态框（Modal）
+    	下架提示
+    -->
+		<div id="modal-offsale" class="modal fade" role="dialog">
+				<div class="modal-dialog">						
+						<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">下架提示</h4>
+						</div>
+						<div class="modal-body">
+							<h4>该商品下架后可在“已下架”页面找回，确定要下架吗？</h4>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" >确定</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						</div>
+				  </div>						
+		    </div>
+		</div>	    				
+	    				<!--
+                  模态框（Modal）
+    	编辑商品
+    -->
+    <div id="modal-edit" class="modal fade" role="dialog" data-show="true">
+		  <div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" >&times;</button>
+		        <h4 class="modal-title">编辑商品</h4>
+		      </div>
+		      <div class="modal-body">
+		        <form action="" class="form-horizontal">
+		        		<div class="form-group">
+							    <label for="goods-title" class="control-label col-sm-2">商品标题</label>
+							    <div class="col-sm-8">
+							    	<input type="text" class="form-control" id="goods-title" name="title" placeholder="请输入商品标题" autofocus>
+							  	</div>
+							  </div>
+							  <div class="form-group">	
+							  	<label for="goods-price" class="control-label col-sm-2">商品价格</label>
+								  <div class="col-sm-8">
+								  	<input type="text" class="form-control" id="goods-price" name="price" placeholder="请输入合适的价格" maxlength="8" autocomplete="off">
+							  	</div>
+							  </div>
+							  <div class="form-group">
+							    <label for="goods-trans-address" class="control-label col-sm-2">交易地点</label>
+							    <div class="col-sm-8">
+							    	<input type="text" class="form-control" id="goods-trans-address" name="address" placeholder="请输入交易地点" autocomplete="off">
+							  	</div>
+							  </div>	
+							  <div class="form-group">
+							    <label for="goods-category" class="control-label col-sm-2">商品分类</label>
+							    <div class="col-sm-8">
+							    	<select class="form-control" id="goods-category" name="category" autocomplete="off">
+											<option value="">点击选择分类</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+										</select><br>
+									</div>	
+							  </div>
+							  <div class="form-group">
+							    <label for="owner-tel" class="control-label col-sm-2">手机号码</label>
+							    <div class="col-sm-8">
+							    	<input type="tel" class="form-control" id="owner-tel" name="telephone" placeholder="请留下手机号码" maxlength="11" autocomplete="off">
+							  	</div>
+							  </div>
+							  <div class="form-group">
+							    <label for="owner-social-account" class="control-label col-sm-2">社交账号</label>
+							    <div class="col-sm-8">
+							    	<input type="text" class="form-control" id="owner-social-account" name="socialAccount" placeholder="输入QQ、微信等联系方式" maxlength="30" autocomplete="off">
+							  	</div>
+							  </div>
+							  <div class="form-group">
+							    <label for="goods-description" class="control-label col-sm-2">商品详情</label>
+							    <div class="col-sm-8">
+								    <textarea class="form-control" id="goods-description" name="description" rows="4" placeholder="介绍一下您的宝贝吧（最多200字）" maxlength="200" autocomplete="off"></textarea>
+								    <span id="words-num">已输入0个字，还能输入200个字</span>
+								  </div>
+							  </div>
+		        </form>
+		      </div>
+		      <div class="modal-footer">
+		      	<button type="button" class="btn btn-default" >保存</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</body>
+</html>
